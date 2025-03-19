@@ -4,14 +4,15 @@
  */
 package mx.itson.music.entidades;
 
+import java.util.ArrayList;
 import java.util.List;
-import mx.itson.music.enums.Género;
+import mx.itson.music.enums.Genero;
 
 /**
  *
  * @author rosales
  */
-public class Álbum {
+public class Album {
 
     /**
      * @return the nombre
@@ -56,42 +57,54 @@ public class Álbum {
     }
 
     /**
-     * @return the canción
+     * @return the canciones
      */
-    public List<Canción> getCanción() {
-        return canción;
+    public List<Cancion> getCanciones() {
+        // Asegurarse de que canciones nunca sea null
+        if (canciones == null) {
+            canciones = new ArrayList<>();
+        }
+        return canciones;
     }
 
     /**
-     * @param canción the canción to set
+     * @param canciones the canciones to set
      */
-    public void setCanción(List<Canción> canción) {
-        this.canción = canción;
+    public void setCanciones(List<Cancion> canciones) {
+        this.canciones = canciones;
     }
 
     /**
-     * @return the género
+     * @return the genero
      */
-    public Género getGénero() {
-        return género;
+    public Genero getGenero() {
+        return genero;
     }
 
     /**
-     * @param género the género to set
+     * @param genero the genero to set
      */
-    public void setGénero(Género género) {
-        this.género = género;
+    public void setGenero(Genero genero) {
+        this.genero = genero;
     }
-    
+
     private String nombre;
     
     private Artista artista;
     
     private int lanzamiento;
     
-    private List<Canción> canción;
+    private List<Cancion> canciones;
     
-    private Género género;
-    
-    
+    private Genero genero;
+
+    // Constructor para inicializar la lista canciones
+    public Album() {
+        this.canciones = new ArrayList<>();
+    }
+
+    // Método para asignar el ArrayList de canciones al atributo canciones
+    public void setCancion(ArrayList<Cancion> canciones) {
+        this.canciones = canciones;
+    }
 }

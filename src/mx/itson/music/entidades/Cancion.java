@@ -8,7 +8,7 @@ package mx.itson.music.entidades;
  *
  * @author rosales
  */
-public class Canción {
+public class Cancion {
 
     /**
      * @return the nombre

@@ -8,7 +8,7 @@ package mx.itson.music.enums;
  *
  * @author rosales
  */
-public enum Género {
+public enum Genero {
     
     POP,
     ROCK,
